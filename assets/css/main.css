@@ -4,6 +4,23 @@
   width: 120vw;
 }
 
+.heading {
+  position: relative;
+  font-weight: bold;
+  text-shadow: -2px 2px 5px #000;
+}
+.heading::before {
+  height: 5px;
+  width: 50px;
+  content: "";
+  border-radius: 30px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  background-image: linear-gradient(to left, var(--c3), var(--c1));
+  box-shadow: -2px 2px 5px #000;
+}
+
 .app-btn1 {
   display: inline-block;
   padding: 0.5em 2em;
@@ -52,6 +69,23 @@
 #home .hero .hero-img {
   height: clamp(280px, 40vw, (50vh + 50vw) / 2.3);
   width: clamp(280px, 40vw, (50vh + 50vw) / 2.3);
+}
+@media (max-width: 600px) {
+  #home .hero .hero-img {
+    height: clamp(230px, 40vw, (50vh + 50vw) / 2.3);
+    width: clamp(230px, 40vw, (50vh + 50vw) / 2.3);
+  }
+}
+
+#about .about-card1 {
+  border: 1px solid var(--c1);
+  box-shadow: -5px 5px 30px rgba(0, 0, 0, 0.3333333333);
+}
+#about .about-card1:hover {
+  box-shadow: -5px 5px 30px rgba(0, 0, 0, 0.6666666667);
+  background-color: var(--c1);
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1333333333));
+  color: var(--c4);
 }
 
 .page-cover {

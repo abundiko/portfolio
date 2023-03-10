@@ -52,13 +52,22 @@ function checkUrl(animate) {
   middleContent.innerHTML = '';
   if (url.includes('#contact'))
     toPage('contact')
-  else if (url.includes('#about'))
+  else if (url.includes('#about')) {
     toPage('about')
+    middleContent.innerHTML = `
+      <i class="fas fa-code t1 fs-1 dposa dopa5 dparallax" style="top:30px; left:30px; filter:blur(1px)" data-parallax-speed="2"></i>
+      <i class="fab t1 fs-1 dposa dopa5 dparallax fa-java" style="top:30px; left:100px; filter:blur(1px)" data-parallax-speed="2"></i>
+      <i class="fab fa-android t1 fs-1 dposa dopa5 dparallax" style="top:30px; left:170px; filter:blur(1px)" data-parallax-speed="2"></i>
+      <i class="fab t1 fs-1 dposa dopa5 dparallax fa-apple" style="top:100px; left:30px; filter:blur(1px)" data-parallax-speed="2"></i>
+      <i class="fab t1 fs-1 dposa dopa5 dparallax fa-css3" style="top:100px; left:100px; filter:blur(1px)" data-parallax-speed="2"></i>
+      <i class="fab t1 fs-1 dposa dopa5 dparallax fa-js-square" style="top:170px; left:30px; filter:blur(1px)" data-parallax-speed="2"></i>
+    `;
+  }
   else if (url.includes('#portfolio'))
     toPage('portfolio')
   else {
     toPage('home')
-    middleContent.innerHTML = `<div class="dots dflex dwrap djcsb dposa dparallax" data-parallax-speed="3"
+    middleContent.innerHTML = `<div class="dots dflex dwrap djcsb dposa dparallax" data-parallax-speed="1"
           style="width: 120px; left: 10vw; top: 2vh;">
           <dot class="d-inline-block rounded-circle bg1 mb-2" style="width: 30px; height: 30px;"></dot>
           <dot class="d-inline-block rounded-circle bg1 mb-2" style="width: 30px; height: 30px;"></dot>
@@ -70,11 +79,11 @@ function checkUrl(animate) {
           <dot class="d-inline-block rounded-circle bg1 mb-2" style="width: 30px; height: 30px;"></dot>
           <dot class="d-inline-block rounded-circle bg1 mb-2" style="width: 30px; height: 30px;"></dot>
         </div>
-        <div class="circle rounded-circle bg02 dposa dparallax"
-          style="height: 100px; width: 100px; right: 5vw; bottom: 15vh;" data-parallax-speed="1">
+        <div class="circle rounded-circle bg02 dposa dparallax dfblur10"
+          style="height: max(300px, 50vw); width: max(300px, 50vw); left: -5vw; bottom: -200px;" data-parallax-speed="0.5">
         </div>
-        <div class="circle rounded-circle bg02 dposa dparallax" data-parallax-speed="0.5"
-          style="height: 150px; width: 150px; right: -70px; bottom: 5vh;">
+        <div class="circle rounded-circle bg02 dposa dparallax dfblur10" data-parallax-speed="0.3"
+          style="height: 50vw; width: 50vw; right: -25vw; bottom: 5vh;">
         </div>`;
 
   }
@@ -84,7 +93,9 @@ function toPage(pageId) {
   // window.location.href = window.location.href.split('#')[0] + "#" + pageId;
   PAGES.forEach((page) => {
     page.classList.remove('show');
+    page.classList.add('d-none');
   });
+  DOM.remState(pageId, 'd-none');
   setTimeout(() => {
 
     DOM.addState(pageId, 'show');

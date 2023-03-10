@@ -29,7 +29,7 @@
         <a href="index.html#" class="display-block app-nav-link mx-1 mb-2 mb-md-0 ">Home</a>
         <a href="index.html#about" class="display-block app-nav-link mx-1 mb-2 mb-md-0">About</a>
         <a href="index.html#contact" class="display-block app-nav-link mx-1 mb-2 mb-md-0">Contact</a>
-        <a href="index.html#portfolio" class="display-block app-nav-link mx-1 mb-2 mb-md-0">Portfolio</a>
+        <a href="index.html#portfolio" class="display-block app-nav-link mx-1 mb-2 mb-md-0 bg">Portfolio</a>
       </nav>
     </div><i id="nav-x" class="d-md-none fas fa-bars d-block p-2 dbor15 t1 fs-2" onclick="
            DOM.addState('nav-container', 'open');
@@ -55,7 +55,7 @@
               style="--shadow-blur:50; --shadow-color:#000000dd" class="hero-img rounded-circle dshadow dparallax"
               data-parallax-speed="0.02">
           </div>
-          <div class="col-11 col-md-6">
+          <div class="col-11 col-md-6 text-center text-md-start">
             <h3><b>
                 <span>Hi, I'm </span>
                 <span class="t1">John Doe</span>
@@ -63,10 +63,14 @@
             <h1 class="fw-bold"> <span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod cumque quas veniam placeat nostrum odio
               suscipit vel dolorem officia maxime?</p>
-            <a href="#about" class="app-btn1 dtdn"><i class="fas fa-user me-2"></i> About Me <i
-                class="arrow fas fa-chevron-right "></i></a>
-            <a href="#portfolio" class="app-btn1 dtdn ms-2"><i class="fas fa-briefcase me-2"></i> My Works <i
-                class="arrow fas fa-chevron-right "></i></a>
+            <div class="dflex justify-content-center justify-content-md-start">
+
+              <a href="#about" class="app-btn1 dtdn"><i class="fas fa-user me-2"></i> About Me <i
+                  class="arrow fas fa-chevron-right "></i></a>
+              <a href="#portfolio" class="app-btn1 dtdn ms-2 d-none d-md-inline-block"><i
+                  class="fas fa-briefcase me-2"></i> My Works
+                <i class="arrow fas fa-chevron-right "></i></a>
+            </div>
           </div>
         </div>
       </div>
@@ -107,11 +111,58 @@
     </section>
     <section class="page" id="about">
       <div class="my-4"></div>
-      <div class="container pb-5">
+      <div class="container py-5">
         <div class="row">
-          <h3><b>About Me</b></h3>
+          <h3 class="heading p-0">About Me</h3>
           <div class="col-12 col-md-6 p-4">
-
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore eaque dolorum veritatis commodi quis
+              placeat alias, fugit consequatur, quo inventore accusamus sunt ab reprehenderit totam in at natus, libero
+              repudiandae.
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore eaque dolorum veritatis commodi quis
+              placeat alias, fugit consequatur, quo inventore accusamus sunt ab reprehenderit totam in at natus, libero
+              repudiandae.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 p-4 dflex flex-wrap">
+            <div class="col-6 p-1">
+              <div class="h-100 w-100 about-card1 dbor10 dflex djcc dfdc dalc">
+                <h1><b>30+</b></h1>
+                <h6 class="dopa8">PROJECTS</h6>
+              </div>
+            </div>
+            <div class="col-6 p-1">
+              <div class="h-100 w-100 about-card1 dbor10 dflex djcc dfdc dalc">
+                <h1><b>30+</b></h1>
+                <h6 class="dopa8">PROJECTS</h6>
+              </div>
+            </div>
+            <div class="col-6 p-1">
+              <div class="h-100 w-100 about-card1 dbor10 dflex djcc dfdc dalc">
+                <h1><b>30+</b></h1>
+                <h6 class="dopa8">PROJECTS</h6>
+              </div>
+            </div>
+            <div class="col-6 p-1">
+              <div class="h-100 w-100 about-card1 dbor10 dflex djcc dfdc dalc">
+                <h1><b>30+</b></h1>
+                <h6 class="dopa8">PROJECTS</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 py-4">
+            <h5><b>My Skills</b></h5>
+            <div class="col-12">
+              <p class="col-12 col-md-8 dopa8">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi asperiores iure minima!
+              </p>
+            </div>
+            <div class="col-12 p-3 col-md-6 col-xl-4">
+              <h6>HTML 5</h6>
+              
+            </div>
           </div>
         </div>
       </div>
