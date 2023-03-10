@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="keywords" content="">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abundance Ken-Dickson</title>
@@ -36,29 +37,12 @@
             "></i>
   </header>
   <section class="back dposf dt0 dl0 doverh w-100 h-100">
-    <img src="assets/img/gradient.jpeg" alt="" class="h-110 w-110 dposa dtransform-center back-img">
+    <img src="assets/img/gradient.jpeg" alt="" class=" dposa dtransform-center back-img">
   </section>
   <section class="middle dposf dt0 dl0 doverh w-100 h-100">
     <div class="container">
-      <div class="row">
-        <div class="dots dflex dwrap djcsb dposa dparallax" data-parallax-speed="3"
-          style="width: 120px; left: 10vw; top: 2vh;">
-          <dot class="d-inline-block rounded-circle bg1 mb-2" style="width: 30px; height: 30px;"></dot>
-          <dot class="d-inline-block rounded-circle bg1 mb-2" style="width: 30px; height: 30px;"></dot>
-          <dot class="d-inline-block rounded-circle bg1 mb-2" style="width: 30px; height: 30px;"></dot>
-          <dot class="d-inline-block rounded-circle bg1 mb-2" style="width: 30px; height: 30px;"></dot>
-          <dot class="d-inline-block rounded-circle bg1 mb-2" style="width: 30px; height: 30px;"></dot>
-          <dot class="d-inline-block rounded-circle bg1 mb-2" style="width: 30px; height: 30px;"></dot>
-          <dot class="d-inline-block rounded-circle bg1 mb-2" style="width: 30px; height: 30px;"></dot>
-          <dot class="d-inline-block rounded-circle bg1 mb-2" style="width: 30px; height: 30px;"></dot>
-          <dot class="d-inline-block rounded-circle bg1 mb-2" style="width: 30px; height: 30px;"></dot>
-        </div>
-        <div class="circle rounded-circle bg02 dposa dparallax"
-          style="height: 100px; width: 100px; right: 5vw; bottom: 15vh;" data-parallax-speed="1">
-        </div>
-        <div class="circle rounded-circle bg02 dposa dparallax" data-parallax-speed="0.5"
-          style="height: 150px; width: 150px; right: -70px; bottom: 5vh;">
-        </div>
+      <div class="row" id="middle-content">
+
       </div>
   </section>
   <section class="front w-100 ">
@@ -68,7 +52,8 @@
         <div class="row h-100 dalc djcc">
           <div class="col-11 col-md-6 p-4 dflex djcc dalc">
             <img src="assets/img/james.avif" alt="Abundance Ken-Dickson"
-              style="--shadow-blur:50; --shadow-color:#000000dd" class="hero-img rounded-circle dshadow">
+              style="--shadow-blur:50; --shadow-color:#000000dd" class="hero-img rounded-circle dshadow dparallax"
+              data-parallax-speed="0.02">
           </div>
           <div class="col-11 col-md-6">
             <h3><b>
@@ -79,6 +64,8 @@
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod cumque quas veniam placeat nostrum odio
               suscipit vel dolorem officia maxime?</p>
             <a href="#about" class="app-btn1 dtdn"><i class="fas fa-user me-2"></i> About Me <i
+                class="arrow fas fa-chevron-right "></i></a>
+            <a href="#portfolio" class="app-btn1 dtdn ms-2"><i class="fas fa-briefcase me-2"></i> My Works <i
                 class="arrow fas fa-chevron-right "></i></a>
           </div>
         </div>
@@ -119,7 +106,15 @@
       </div>
     </section>
     <section class="page" id="about">
-      <h1>About</h1>
+      <div class="my-4"></div>
+      <div class="container pb-5">
+        <div class="row">
+          <h3><b>About Me</b></h3>
+          <div class="col-12 col-md-6 p-4">
+
+          </div>
+        </div>
+      </div>
     </section>
     <section class="page" id="contact">
       <h1>Contact</h1>
@@ -128,6 +123,9 @@
       <h1>Portfolio</h1>
     </section>
   </section>
+  <aside class="page-cover dposf h-100 w-100 dl0 dt0 d-none" id="page-cover">
+    <div id="page-cover-main" class="page-cover-main dposa bg1 rounded-circle"></div>
+  </aside>
 </body>
 <script src="assets/js/diko.js"></script>
 <script src="assets/js/main.js"></script>

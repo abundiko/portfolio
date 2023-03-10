@@ -1,5 +1,7 @@
 .back-img {
   filter: blur(30px);
+  height: 120vh;
+  width: 120vw;
 
 }
 
@@ -58,4 +60,22 @@
     }
   }
 
+}
+
+
+
+.page-cover {
+  transition: all 0s !important;
+  z-index: 11;
+
+  .page-cover-main {
+    height: 20px;
+    width: 20px;
+    top: -10px;
+    left: -10px;
+
+    &.animate {
+      transform: scale(200);
+    }
+  }
 }

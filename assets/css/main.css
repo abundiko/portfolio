@@ -1,5 +1,7 @@
 .back-img {
   filter: blur(30px);
+  height: 120vh;
+  width: 120vw;
 }
 
 .app-btn1 {
@@ -50,4 +52,18 @@
 #home .hero .hero-img {
   height: clamp(280px, 40vw, (50vh + 50vw) / 2.3);
   width: clamp(280px, 40vw, (50vh + 50vw) / 2.3);
+}
+
+.page-cover {
+  transition: all 0s !important;
+  z-index: 11;
+}
+.page-cover .page-cover-main {
+  height: 20px;
+  width: 20px;
+  top: -10px;
+  left: -10px;
+}
+.page-cover .page-cover-main.animate {
+  transform: scale(200);
 }/*# sourceMappingURL=main.css.map */
