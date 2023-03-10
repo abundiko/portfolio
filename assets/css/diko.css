@@ -3,17 +3,18 @@
 *{padding: 0; margin: 0; box-sizing: border-box; background-size: cover; scroll-behavior: smooth; font-family:  'Poppins', sans-serif; transition: 0.3s; object-fit:cover; background-size:cover;}
 /*THIS CSS WAS WRITTEN BY diko*/
 :root{
-    --c1: #1977cc;
-    --c2: #59ff00;
+    --c1: #f2ff35;
+    --c2: #00d0ff;
     --c3: #efefef;
-    --c4: #00000c;
-    --c5: #fff;
+    --c4: #01012b;
+    --c5: #d9d9d9;
     --c6: #2443f3;
     --c7: #c9000011;
     --image: url('../img/book red bg.jpg');
     scrollbar-width: thin ;
     --hover-color:var(--c1);
-    --progress-bar-height: 12px;
+    --shadow-blur: 20;
+    --shadow-color: #00000055;
 }
 *{scrollbar-width: thin ;}
 *::-webkit-scrollbar{width: 10px;}
@@ -99,6 +100,11 @@ a:hover{cursor:pointer;}
 .dlh1{line-height: 1;}
 .dlh2{line-height: 2;}
 
+/* SHADOW */
+.dshadow{
+  box-shadow: 0 0 calc(var(--shadow-blur) * 1px) var(--shadow-color);
+}
+
 /* FONT */
 .dfbold{font-weight: bold;}
 .dfnorm{font-style: normal;}
@@ -171,6 +177,7 @@ a:hover{cursor:pointer;}
 .dw40{width: 40%;}
 .dw60{width: 60%;}
 .dw80{width: 80%;}
+.w-110{width: 110%;}
 .dwfit{width: fit-content;}
 
 .dh100{height: 100%!important;}
@@ -179,6 +186,7 @@ a:hover{cursor:pointer;}
 .dh80{height: 80%;}
 .dh100h{height: 100vh;}
 .dh50h{height: 50vh;}
+.h-110{width: 110%;}
 .dhfit{height: fit-content;}
 
 .dmh100{min-height: 100px;}

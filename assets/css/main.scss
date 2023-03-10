@@ -1,0 +1,61 @@
+.back-img {
+  filter: blur(30px);
+
+}
+
+.app-btn1 {
+  display: inline-block;
+  padding: .5em 2em;
+  border: 2px solid var(--c1);
+  border-radius: 30px;
+  box-shadow: 2px 2px 5px #000000dd, -2px -2px 5px #ffffffaa;
+  backdrop-filter: blur(10px);
+  background-color: #00000055;
+  color: inherit;
+
+  .arrow {
+    opacity: 0;
+  }
+}
+
+.app-btn1:hover {
+  background-color: var(--c1);
+  color: var(--c4);
+
+  .arrow {
+    opacity: 1;
+    transform: translateX(5px);
+  }
+}
+
+.page {
+  width: 100%;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(0, 30vh);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0s;
+
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: .5s ease-out;
+  }
+}
+
+#home {
+  .hero {
+    height: 85vh;
+
+    .hero-img {
+      height: clamp(280px, 40vw, calc((50vh + 50vw) / 2.3));
+      width: clamp(280px, 40vw, calc((50vh + 50vw) / 2.3));
+    }
+  }
+
+}
