@@ -4,6 +4,24 @@
   width: 120vw;
 }
 
+.about-card1 {
+  border: 1px solid var(--c1);
+  box-shadow: -5px 5px 30px rgba(0, 0, 0, 0.3333333333);
+}
+.about-card1:hover {
+  box-shadow: -5px 5px 30px rgba(0, 0, 0, 0.6666666667);
+  background-color: var(--c1);
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1333333333));
+  color: var(--c4);
+}
+
+.contact-card {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+}
+.contact-card:hover {
+  color: var(--c2);
+}
+
 .heading {
   position: relative;
   font-weight: bold;
@@ -19,6 +37,36 @@
   left: 0;
   background-image: linear-gradient(to left, var(--c3), var(--c1));
   box-shadow: -2px 2px 5px #000;
+}
+
+.transform-header {
+  top: -20px;
+  left: -0.5vw;
+}
+
+.app-progress-bar {
+  height: 25px;
+}
+.app-progress-bar > div {
+  width: 0%;
+  background-image: linear-gradient(to left, var(--c1), var(--c2));
+  transition: 1s ease-out;
+  opacity: 0;
+}
+.app-progress-bar.scrolled > div {
+  width: var(--progress);
+  opacity: 1;
+}
+
+.change-border {
+  width: 80%;
+  height: 2px;
+}
+@media (min-width: 768px) {
+  .change-border {
+    width: 2px;
+    height: 80%;
+  }
 }
 
 .app-btn1 {
@@ -77,15 +125,8 @@
   }
 }
 
-#about .about-card1 {
-  border: 1px solid var(--c1);
-  box-shadow: -5px 5px 30px rgba(0, 0, 0, 0.3333333333);
-}
-#about .about-card1:hover {
-  box-shadow: -5px 5px 30px rgba(0, 0, 0, 0.6666666667);
-  background-color: var(--c1);
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1333333333));
-  color: var(--c4);
+#contact .contact-yellow {
+  box-shadow: 3px 3px 70px rgba(0, 0, 0, 0.4);
 }
 
 .page-cover {

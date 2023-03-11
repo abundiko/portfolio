@@ -54,6 +54,9 @@ a:hover{cursor:pointer;}
 .dfblur30 {
   filter: blur(30px)
 }
+/* Visibility */
+.dvv{visibility: visible;}
+.dvh{visibility: hidden;}
 
 .t1{color: var(--c1);}
 .t2{color: var(--c2);}
