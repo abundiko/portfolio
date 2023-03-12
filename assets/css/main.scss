@@ -29,6 +29,7 @@
   position: relative;
   font-weight: bold;
   text-shadow: -2px 2px 5px #000;
+  margin-top: 5vh;
 
   &::before {
     height: 5px;
@@ -49,7 +50,7 @@
 }
 
 .app-progress-bar {
-  height: 25px;
+  height: 18px;
 
   >div {
     width: 0%;
@@ -148,7 +149,72 @@
   }
 }
 
+#portfolio {
+  .portfolio-card {
+    height: calc((50vh + 400px + 10vw)/2.5);
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8666666667), -2px -2px 5px rgba(255, 255, 255, 0.6666666667);
 
+    >div {
+      height: 100%;
+      border-radius: 15px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      width: 100%;
+    }
+
+
+    .middle {
+      border: 1px solid var(--c1);
+    }
+
+    .front {
+      border: 1px solid var(--c2);
+    }
+
+    .main-content {
+      .content {
+        background-image: linear-gradient(to top, #000, #00000011);
+
+        >div {
+          transform: translateY(4.2em);
+        }
+      }
+    }
+
+    &:hover {
+      box-shadow: none;
+
+      .back {
+        transform: translate(-15px, 15px) scale(1.05);
+      }
+
+      .middle {
+        transform: translate(-10px, -10px);
+      }
+
+      .front {
+        transform: translate(10px, 10px);
+      }
+
+      .main-content {
+        box-shadow: 3px 3px 30px #000000;
+
+        .content>div {
+          transform: translateY(0em);
+        }
+      }
+    }
+  }
+}
+
+#post {
+  .post-main {
+    min-height: 60vh;
+  }
+}
 
 
 .page-cover {
@@ -165,4 +231,8 @@
       transform: scale(200);
     }
   }
+}
+
+.post-small-img {
+  height: min(50vh, 280px);
 }

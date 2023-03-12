@@ -26,6 +26,7 @@
   position: relative;
   font-weight: bold;
   text-shadow: -2px 2px 5px #000;
+  margin-top: 5vh;
 }
 .heading::before {
   height: 5px;
@@ -45,7 +46,7 @@
 }
 
 .app-progress-bar {
-  height: 25px;
+  height: 18px;
 }
 .app-progress-bar > div {
   width: 0%;
@@ -129,6 +130,55 @@
   box-shadow: 3px 3px 70px rgba(0, 0, 0, 0.4);
 }
 
+#portfolio .portfolio-card {
+  height: calc((50vh + 400px + 10vw) / 2.5);
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8666666667), -2px -2px 5px rgba(255, 255, 255, 0.6666666667);
+}
+#portfolio .portfolio-card > div {
+  height: 100%;
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+}
+#portfolio .portfolio-card .middle {
+  border: 1px solid var(--c1);
+}
+#portfolio .portfolio-card .front {
+  border: 1px solid var(--c2);
+}
+#portfolio .portfolio-card .main-content .content {
+  background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0.0666666667));
+}
+#portfolio .portfolio-card .main-content .content > div {
+  transform: translateY(4.2em);
+}
+#portfolio .portfolio-card:hover {
+  box-shadow: none;
+}
+#portfolio .portfolio-card:hover .back {
+  transform: translate(-15px, 15px) scale(1.05);
+}
+#portfolio .portfolio-card:hover .middle {
+  transform: translate(-10px, -10px);
+}
+#portfolio .portfolio-card:hover .front {
+  transform: translate(10px, 10px);
+}
+#portfolio .portfolio-card:hover .main-content {
+  box-shadow: 3px 3px 30px #000000;
+}
+#portfolio .portfolio-card:hover .main-content .content > div {
+  transform: translateY(0em);
+}
+
+#post .post-main {
+  min-height: 60vh;
+}
+
 .page-cover {
   transition: all 0s !important;
   z-index: 11;
@@ -141,4 +191,8 @@
 }
 .page-cover .page-cover-main.animate {
   transform: scale(200);
+}
+
+.post-small-img {
+  height: min(50vh, 280px);
 }/*# sourceMappingURL=main.css.map */

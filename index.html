@@ -16,12 +16,12 @@
 
 <body id="body" class="doverxh t5">
   <header class="dheader header " id="header">
-    <a href="#contact" class="app-btn1 dtdn ms-2 d-none d-md-inline-block px-3 bg02"><i class="fas fa-comment me-2"></i>
+    <a href="#contact" class="app-btn1 dtdn ms-2  d-md-inline-block px-3 bg02"><i class="fas fa-comment me-2"></i>
       Contact Me
       <i class="arrow fas fa-chevron-right "></i></a>
     <div class="nav-container " id="nav-container">
-      <div class="dflex w-100 djcsb p-4 d-md-none"><a href="index.php"></a><i id=" nav-x"
-          class=" fas fa-close d-block p-2 dbor15 t1 fs-2" onclick="
+      <div class="dflex w-100 djcsb p-4 d-md-none"><span></span><i id=" nav-x"
+          class="dtext-shadow fas fa-close d-block p-2 dbor15 t1 fs-2" onclick="
            DOM.remState('nav-container', 'open');
             DOM.remState('body', 'doverh');
             "></i>
@@ -33,13 +33,13 @@
         <a href="index.html#contact" class="display-block app-nav-link mx-1 mb-2 mb-md-0">Contact</a>
         <a href="index.html#portfolio" class="display-block app-nav-link mx-1 mb-2 mb-md-0 bg">Portfolio</a>
       </nav>
-    </div><i id="nav-x" class="d-md-none fas fa-bars d-block p-2 dbor15 t1 fs-2" onclick="
+    </div><i id="nav-x" class="d-md-none fas fa-bars d-block p-2 dbor15 t1 fs-2 dtext-shadow" onclick="
            DOM.addState('nav-container', 'open');
             DOM.addState('body', 'doverh');
             "></i>
   </header>
   <section class="back dposf dt0 dl0 doverh w-100 h-100">
-    <img src="assets/img/gradient.jpeg" alt="" class=" dposa dtransform-center back-img">
+    <img src="assets/img/gradient.jpeg" alt="" class=" dposa dtransform-center back-img" id="back-img">
   </section>
   <section class="middle dposf dt0 dl0 doverh w-100 h-100">
     <div class="container">
@@ -256,7 +256,7 @@
           </div>
         </div>
       </div>
-      <div class="pb-5 pt-4 bg2">
+      <div class="pb-5 pt-4 bg2 dhfit">
         <div class="container ">
           <div class="row  p-2 t0">
             <h5><b>My Experience</b></h5>
@@ -265,7 +265,8 @@
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, consequuntur ab. Enim numquam iste
                 necessitatibus!</p>
             </div>
-            <div class="d-flex flex-wrap text-center justify-content-center justify-content-md-between dalc py-md-2">
+            <div
+              class="d-flex flex-wrap text-center justify-content-center justify-content-md-between dalc py-md-2 col-12 h-100">
               <div class="col-11 col-md-3 p-3 p-md-0">
                 <h6><b>Website Design </b></h6>
                 <span class="dbor15 d-inline-block py-1 mb-2 px-4 bg0 tf1 text-center">
@@ -304,8 +305,11 @@
     <section class="page" id="contact">
       <div class="my-4"></div>
       <div class="container pt-5 pb-4">
-        <div class="row pb-5">
-          <h3 class="heading p-0 ">Contact Me</h3>
+        <div class="row pb-5 djcsa">
+          <div class="col-12">
+
+            <h3 class="heading p-0 ">Contact Me</h3>
+          </div>
           <div class="col-12 col-md-6 d-flex flex-wrap mt-4 mt-md-5">
             <a href="tel:07031594603" class="p-3 dbor15 dflex dalc dtdn t3 w-100 contact-card mb-3">
 
@@ -332,7 +336,7 @@
               </div>
             </a>
           </div>
-          <div class="col-11 dbor10 bg1 bg2 col-md-5 p-3 t0 contact-yellow">
+          <div class="col-11 dbor10 bg1 bg2 col-md-5 p-3 t0 contact-yellow mt-3">
             <p>Also reach me on</p>
 
 
@@ -346,6 +350,8 @@
               <i class="d-inline-block me-2 fab fa-instagram"></i> Abundiko
             </a><a href="" class="dbor15 d-inline-block py-2 mb-2 me-2 px-4 bg0 tf1 text-center dtdn">
               <i class="d-inline-block me-2 fab fa-twitter"></i> Abundiko
+            </a><a href="" class="dbor15 d-inline-block py-2 mb-2 me-2 px-4 bg0 tf1 text-center dtdn">
+              <i class="d-inline-block me-2 fab fa-stack-overflow"></i> Abundiko
             </a>
           </div>
 
@@ -353,7 +359,230 @@
       </div>
     </section>
     <section class="page" id="portfolio">
-      <h1>Portfolio</h1>
+      <div class="my-4"></div>
+      <div class="container pt-5 pb-4">
+        <div class="row ">
+          <div class="col-12">
+            <h3 class="heading p-0 ">My Portfolio</h3>
+            <p class="dopa8 col-md-8 mt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi
+              laboriosam
+              distinctio
+              placeat.</p>
+          </div>
+          <div class="col-12 dflex dwrap djcc justify-content-md-start">
+            <div class="col-10 col-sm-6 col-md-4 col-lg-3 px-2 py-4">
+              <div class="portfolio-card dposr" id="post1">
+                <div class="back bg4 dopa5"></div>
+                <div class="middle"></div>
+                <div class="front"></div>
+                <div class="main-content">
+                  <img src="assets/img/img.jpg" alt="..." class="h-100 w-100">
+                  <div class="content dposa dt0 dl0 dflex  dfdc h-100 justify-content-end p-3">
+                    <div>
+                      <h5 class="fw-bold">James Thew's Website</h5>
+                      <p class="dopa8">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, repudiandae?
+                      </p>
+                      <a href="#post1" class="app-btn1 dtdn text-center w-100">
+                        Details
+                        <i class="arrow fas fa-chevron-right "></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-10 col-sm-6 col-md-4 col-lg-3 px-2 py-4">
+              <div class="portfolio-card dposr" id="post2">
+                <div class="back bg4 dopa5"></div>
+                <div class="middle"></div>
+                <div class="front"></div>
+                <div class="main-content">
+                  <img src="assets/img/img.jpg" alt="..." class="h-100 w-100">
+                  <div class="content dposa dt0 dl0 dflex  dfdc h-100 justify-content-end p-3">
+                    <div>
+                      <h5 class="fw-bold">James Thew's Website</h5>
+                      <p class="dopa8">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, repudiandae?
+                      </p>
+                      <a href="#post2" class="app-btn1 dtdn text-center w-100">
+                        Details
+                        <i class="arrow fas fa-chevron-right "></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-10 col-sm-6 col-md-4 col-lg-3 px-2 py-4">
+              <div class="portfolio-card dposr" id="post3">
+                <div class="back bg4 dopa5"></div>
+                <div class="middle"></div>
+                <div class="front"></div>
+                <div class="main-content">
+                  <img src="assets/img/img.jpg" alt="..." class="h-100 w-100">
+                  <div class="content dposa dt0 dl0 dflex  dfdc h-100 justify-content-end p-3">
+                    <div>
+                      <h5 class="fw-bold">James Thew's Website</h5>
+                      <p class="dopa8">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, repudiandae?
+                      </p>
+                      <a href="#post3" class="app-btn1 dtdn text-center w-100">
+                        Details
+                        <i class="arrow fas fa-chevron-right "></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-10 col-sm-6 col-md-4 col-lg-3 px-2 py-4">
+              <div class="portfolio-card dposr" id="post4">
+                <div class="back bg4 dopa5"></div>
+                <div class="middle"></div>
+                <div class="front"></div>
+                <div class="main-content">
+                  <img src="assets/img/img.jpg" alt="..." class="h-100 w-100">
+                  <div class="content dposa dt0 dl0 dflex  dfdc h-100 justify-content-end p-3">
+                    <div>
+                      <h5 class="fw-bold">James Thew's Website</h5>
+                      <p class="dopa8">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, repudiandae?
+                      </p>
+                      <a href="#post4" class="app-btn1 dtdn text-center w-100">
+                        Details
+                        <i class="arrow fas fa-chevron-right "></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-10 col-sm-6 col-md-4 col-lg-3 px-2 py-4">
+              <div class="portfolio-card dposr" id="post5">
+                <div class="back bg4 dopa5"></div>
+                <div class="middle"></div>
+                <div class="front"></div>
+                <div class="main-content">
+                  <img src="assets/img/img.jpg" alt="..." class="h-100 w-100">
+                  <div class="content dposa dt0 dl0 dflex  dfdc h-100 justify-content-end p-3">
+                    <div>
+                      <h5 class="fw-bold">James Thew's Website</h5>
+                      <p class="dopa8">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, repudiandae?
+                      </p>
+                      <a href="#post5" class="app-btn1 dtdn text-center w-100">
+                        Details
+                        <i class="arrow fas fa-chevron-right "></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-10 col-sm-6 col-md-4 col-lg-3 px-2 py-4">
+              <div class="portfolio-card dposr" id="post6">
+                <div class="back bg4 dopa5"></div>
+                <div class="middle"></div>
+                <div class="front"></div>
+                <div class="main-content">
+                  <img src="assets/img/img.jpg" alt="..." class="h-100 w-100">
+                  <div class="content dposa dt0 dl0 dflex  dfdc h-100 justify-content-end p-3">
+                    <div>
+                      <h5 class="fw-bold">James Thew's Website</h5>
+                      <p class="dopa8">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, repudiandae?
+                      </p>
+                      <a href="#post6" class="app-btn1 dtdn text-center w-100">
+                        Details
+                        <i class="arrow fas fa-chevron-right "></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-10 col-sm-6 col-md-4 col-lg-3 px-2 py-4">
+              <div class="portfolio-card dposr" id="post7">
+                <div class="back bg4 dopa5"></div>
+                <div class="middle"></div>
+                <div class="front"></div>
+                <div class="main-content">
+                  <img src="assets/img/img.jpg" alt="..." class="h-100 w-100">
+                  <div class="content dposa dt0 dl0 dflex  dfdc h-100 justify-content-end p-3">
+                    <div>
+                      <h5 class="fw-bold">James Thew's Website</h5>
+                      <p class="dopa8">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, repudiandae?
+                      </p>
+                      <a href="#post7" class="app-btn1 dtdn text-center w-100">
+                        Details
+                        <i class="arrow fas fa-chevron-right "></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section id="post" class="page  bg02">
+      <div class="my-4 my-md-5"></div>
+      <div class="container pt-5 pb-4">
+        <div class="row djcc">
+          <div class="col-11 dshadow dbor15 bg02 p-0 dflex dwrap doverh post-main">
+            <div class="col-12 col-md-5"><img src="assets/img/img.jpg" alt="..." class="h-100 w-100 dbor10"></div>
+            <div class="col-12 col-md-7 p-3 dflex flex-wrap dalc">
+              <div class="dhfit">
+                <h2 class=" flex-grow-0"><b>James Thew's Website</b></h2>
+                <p class="dopa8 flex-grow-0">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa sed numquam accusamus tenetur est neque
+                  dignissimos mollitia? Maiores sed eius nihil deserunt eveniet consequuntur quaerat voluptatibus earum,
+                  consequatur praesentium nulla?
+                </p>
+                <div class="dflex flex-grow-0">
+                  <a href="#contact" class="app-btn1 dtdn "><i class="fas fa-globe me-2"></i>
+                    Visit Website
+                    <i class="arrow fas fa-chevron-right "></i></a>
+                  <a href="#contact" class="app-btn1 dtdn ms-2"><i class="fas fa-comment me-2"></i>
+                    Contact Me
+                    <i class="arrow fas fa-chevron-right "></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row py-5 mt-4">
+          <h4>More Images</h4>
+          <div class="col-12">
+            <section class="dslider-container">
+              <button id="dslider-prev" class="dslider-btn bg1"><i class="fas fa-chevron-left"></i></button>
+              <article class="dslider pt-3">
+                <div class="dslider-item pe-3">
+                  <div class="post-small-img">
+                    <img src="assets/img/img.jpg" alt="" class="dbor15 dshadow h-100">
+                  </div>
+                </div>
+                <div class="dslider-item pe-3">
+                  <div class="post-small-img">
+                    <img src="assets/img/img.jpg" alt="" class="dbor15 dshadow h-100">
+                  </div>
+                </div>
+                <div class="dslider-item pe-3">
+                  <div class="post-small-img">
+                    <img src="assets/img/img.jpg" alt="" class="dbor15 dshadow h-100">
+                  </div>
+                </div>
+                <div class="dslider-item pe-3">
+                  <div class="post-small-img">
+                    <img src="assets/img/img.jpg" alt="" class="dbor15 dshadow h-100">
+                  </div>
+                </div>
+                <div class="dslider-item pe-3">
+                  <div class="post-small-img">
+                    <img src="assets/img/img.jpg" alt="" class="dbor15 dshadow h-100">
+                  </div>
+                </div>
+                <div class="dslider-item pe-3">
+                  <div class="post-small-img">
+                    <img src="assets/img/img.jpg" alt="" class="dbor15 dshadow h-100">
+                  </div>
+                </div>
+              </article>
+              <button id="dslider-next" class="dslider-btn bg1"><i class="fas fa-chevron-left"></i></button>
+            </section>
+          </div>
+        </div>
+      </div>
     </section>
   </section>
   <aside class="page-cover dposf h-100 w-100 dl0 dt0 d-none" id="page-cover">

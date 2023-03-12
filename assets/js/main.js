@@ -1,8 +1,10 @@
 const PAGES = document.querySelectorAll('.page');
+const POSTS = document.querySelectorAll('.portfolio-card');
 const homePage = PAGES[0];
 const aboutPage = PAGES[1];
 const middleContent = document.getElementById('middle-content');
 const progressBars = document.querySelectorAll('.app-progress-bar');
+let bgImgPath = '';
 
 
 window.onscroll = e => {
@@ -61,6 +63,10 @@ function checkUrl(animate) {
   middleContent.innerHTML = '';
   if (url.includes('#contact'))
     toPage('contact')
+  else if (url.includes('#post')) {
+
+    toPage('post')
+  }
   else if (url.includes('#about')) {
     toPage('about')
     middleContent.innerHTML = `
@@ -98,7 +104,7 @@ function checkUrl(animate) {
           style="height: max(300px, 50vw); width: max(300px, 50vw); left: -5vw; bottom: -200px;" data-parallax-speed="0.5">
         </div>
         <div class="circle rounded-circle bg02 dposa dparallax dfblur10" data-parallax-speed="0.3"
-          style="height: 50vw; width: 50vw; right: -25vw; bottom: 5vh;">
+          style="height: max(400px,50vw); width: max(400px,50vw); right: -25vw; bottom: 5vh;">
         </div>`;
 
   }
@@ -122,4 +128,31 @@ window.addEventListener('hashchange', () => {
   if (url.includes('contact')) document.querySelector('#header>a').classList.add('dvh');
   else document.querySelector('#header>a').classList.remove('dvh');
 })
+
+
+POSTS.forEach(postCard => {
+  const postId = postCard.id;
+  const postLink = postCard.querySelector('a');
+  const postTitle = postCard.querySelector('h5').innerText;
+  bgImgPath = postCard.querySelector('img').src
+  postLink.onclick = e => {
+
+    setBgImg();
+  }
+});
+
+function fetchPost(params) {
+  const postId = window.location.hash.split('post')[1];
+}
+
+
+
+function setBgImg(path) {
+  document.getElementById('back-img').src = path ||= bgImgPath;
+}
+
+
+
+
+
 checkUrl();
