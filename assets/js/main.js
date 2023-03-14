@@ -5,6 +5,7 @@ const aboutPage = PAGES[1];
 const middleContent = document.getElementById('middle-content');
 const progressBars = document.querySelectorAll('.app-progress-bar');
 let bgImgPath = '';
+let postWasClicked = false;
 
 
 window.onscroll = e => {
@@ -59,7 +60,10 @@ function checkUrl(animate) {
       }, 1000);
     }, 100);
   }
-
+  if (!postWasClicked) {
+    setBgImg('assets/img/gradient.jpeg');
+  }
+  postWasClicked = false;
   middleContent.innerHTML = '';
   if (url.includes('#contact'))
     toPage('contact')
@@ -88,8 +92,8 @@ function checkUrl(animate) {
     toPage('portfolio')
   else {
     toPage('home')
-    middleContent.innerHTML = `<div class="dots dflex dwrap djcsb dposa dparallax" data-parallax-speed="1"
-          style="width: 120px; left: 10vw; top: 2vh;">
+    middleContent.innerHTML = `<div class="dots dflex dwrap djcsb dposa dparallax" data-parallax-speed="0.8"
+          style="width: 120px; left: 10vw; top: 10vh;">
           <dot class="d-inline-block rounded-circle bg1 mb-2" style="width: 30px; height: 30px;"></dot>
           <dot class="d-inline-block rounded-circle bg1 mb-2" style="width: 30px; height: 30px;"></dot>
           <dot class="d-inline-block rounded-circle bg1 mb-2" style="width: 30px; height: 30px;"></dot>
@@ -136,7 +140,9 @@ POSTS.forEach(postCard => {
   const postTitle = postCard.querySelector('h5').innerText;
   bgImgPath = postCard.querySelector('img').src
   postLink.onclick = e => {
-
+    postWasClicked = true;
+    document.getElementById('post-images-slider').scrollLeft - 1000;
+    console.log(document.getElementById('post-images-slider'))
     setBgImg();
   }
 });
@@ -156,3 +162,4 @@ function setBgImg(path) {
 
 
 checkUrl();
+window.scrollTo(0, window.scrollY + 2);
